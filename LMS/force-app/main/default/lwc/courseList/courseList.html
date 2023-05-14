@@ -1,0 +1,48 @@
+<template>
+    <lightning-card>
+        <div class="slds-page-header slds-page-header--object-home">
+            <lightning-layout>
+                <lightning-layout-item>
+                    <lightning-icon icon-name="custom:custom21"></lightning-icon>
+                </lightning-layout-item>
+                <lightning-layout-item class="slds-m-left--small">
+                    <p class="slds-text-title--caps slds-line-height--reset">Courses</p>
+                    <h1 class="slds-page-header__title slds-p-right--x-small">Review
+                        Viewer</h1>
+                </lightning-layout-item>
+            </lightning-layout>
+            <lightning-layout>
+                <lightning-layout-item>
+                    <p class="slds-text-body--small"> Reviews • View
+                        Reviews Based on Selected Courses</p>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+        <label class="slds-form-element__label" for="select-01">Select Courses</label>
+        <div class="slds-form-element__control">
+            <div class="slds-select_container">
+                <select class="slds-select" id="select-01" onchange={onValueSelection}>
+                    <!--iterate all picklist values from Course list using for:each loop-->
+                    <template for:each={courses.data} for:item="c">
+                        <option key={c.Id} value={c.Id}>
+                            {c.Name}
+                        </option>
+                    </template>
+</select>
+</div>
+</div>
+<template if:true={reviews}>
+            <lightning-card title="Reviews">
+                <lightning-button class="slds-m-left_x-small" icon-name="utility:add" onclick={eventHandle} label="New">
+                </lightning-button>
+                <!-- <template if:true={s}> 
+                    <c-review-l-d-s></c-review-l-d-s>
+                </template>-->
+<div style="height: 300px;">
+    <lightning-datatable key-field="Id" data={reviews} columns={columns}>
+    </lightning-datatable>
+</div>
+</lightning-card>
+</template>
+</lightning-card>
+</template>

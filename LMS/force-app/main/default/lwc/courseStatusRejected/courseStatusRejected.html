@@ -1,0 +1,9 @@
+<template>
+    <lightning-card variant="Narrow" title="Course Application Status-Rejected" icon-name="custom:custom13">
+    <template if:true={rejectedStatus}>
+        <lightning-datatable key-field="Id" data={rejectedStatus} columns={columns} hide-checkbox-column="true"
+            show-row-number-column="true">
+        </lightning-datatable>
+    </template>
+</lightning-card>
+</template>

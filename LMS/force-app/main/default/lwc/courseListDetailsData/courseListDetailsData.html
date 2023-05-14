@@ -1,0 +1,14 @@
+<template>
+    <lightning-card variant="Narrow" title="Course Details List" icon-name="custom:custom11">
+            <!-- <template if:true={courseList}> 
+                <lightning-datatable key-field="Id" data={courseList} columns={columns} hide-checkbox-column="true"
+                    show-row-number-column="true">
+                </lightning-datatable>
+            </template>-->
+<template if:true={recordId}>
+                <lightning-record-form object-api-name="Course__c" layout-type="Full" record-id={recordId}>
+                </lightning-record-form>
+            </template>
+
+</lightning-card>
+</template>

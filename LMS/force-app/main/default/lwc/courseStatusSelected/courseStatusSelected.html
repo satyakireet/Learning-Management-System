@@ -1,0 +1,9 @@
+<template>
+    <lightning-card variant="Narrow" title="Course Application Status-Selected" icon-name="custom:custom12">
+    <template if:true={selectedStatus}>
+        <lightning-datatable key-field="Id" data={selectedStatus} columns={columns} hide-checkbox-column="true"
+            show-row-number-column="true">
+        </lightning-datatable>
+    </template>
+</lightning-card>
+</template>

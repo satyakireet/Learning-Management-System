@@ -1,0 +1,10 @@
+<template>
+    <template if:true={user}></template>
+<lightning-card variant="Narrow" title="My Approved Courses" icon-name="custom:custom17">
+
+    <template if:true={aspirants}>
+            <lightning-datatable key-field="Id" data={aspirants} columns={columns}>
+            </lightning-datatable>
+        </template>
+</lightning-card>
+</template>

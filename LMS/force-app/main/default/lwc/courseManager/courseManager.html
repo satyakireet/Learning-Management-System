@@ -1,0 +1,31 @@
+<template>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-card variant="Narrow" title="Course List" icon-name="custom:custom11">
+                <lightning-button class="slds-m-left_x-small" icon-name="utility:add" onclick={eventHandle} label="New">
+                </lightning-button>
+                <lightning-button class="slds-m-left_x-small" icon-name="utility:add" onclick={eventHandle1}
+                    label="New Course Application"></lightning-button>
+                <div style="height: 300px;">
+                    <template if:true={courseList}>
+                        <lightning-datatable key-field="Id" data={courseList} columns={columns}
+                            hide-checkbox-column="true" show-row-number-column="true" onrowaction={handleRowAction}>
+                        </lightning-datatable>
+                    </template>
+</div>
+<lightning-card variant="Narrow" title="Aspirant List" icon-name="custom:custom12">
+    <lightning-button class="slds-m-left_x-small" icon-name="utility:add" onclick={eventHandle2} label="New">
+    </lightning-button>
+    <div style="height: 300px;">
+        <template if:true={aspirants}>
+                            <lightning-datatable key-field="Id" data={aspirants} columns={columns1}
+                                hide-checkbox-column="true" show-row-number-column="true"
+                                onrowaction={handleRowAction1}>
+                            </lightning-datatable>
+                        </template>
+    </div>
+</lightning-card>
+</lightning-card>
+</lightning-layout-item>
+</lightning-layout>
+</template>

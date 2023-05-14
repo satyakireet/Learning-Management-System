@@ -1,0 +1,55 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/courseList": [
+                "courseList/courseList.js"
+            ],
+            "c/reviewLDS": [
+                "reviewLDS/reviewLDS.js"
+            ],
+            "c/pubsub": [
+                "pubsub/pubsub.js"
+            ],
+            "c/courseListData": [
+                "courseListData/courseListData.js"
+            ],
+            "c/courseListDetailsData": [
+                "courseListDetailsData/courseListDetailsData.js"
+            ],
+            "c/courseImages": [
+                "courseImages/courseImages.js"
+            ],
+            "c/courseStatusSelected": [
+                "courseStatusSelected/courseStatusSelected.js"
+            ],
+            "c/courseStatusRejected": [
+                "courseStatusRejected/courseStatusRejected.js"
+            ],
+            "c/aspirantLDS": [
+                "aspirantLDS/aspirantLDS.js"
+            ],
+            "c/trackCourse": [
+                "trackCourse/trackCourse.js"
+            ],
+            "c/courseManager": [
+                "courseManager/courseManager.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    },
+    "paths": {
+        "c/*": [
+            "*"
+        ]
+    }
+}

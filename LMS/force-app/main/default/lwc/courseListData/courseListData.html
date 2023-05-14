@@ -1,0 +1,18 @@
+<template>
+    <lightning-card variant="Narrow" title="Course List" icon-name="custom:custom11">
+
+        <!-- <lightning-input type = "search" onchange = {handleKeyChange} class = "slds-m-bottom_small" label = "Search" >   
+            </lightning-input>-->
+        <div style="height: 300px;">
+            <template if:true={courseList}>
+                <lightning-datatable key-field="Id" data={courseList} columns={columns} hide-checkbox-column="true"
+                    show-row-number-column="true" onrowaction={handleRowAction}>
+                </lightning-datatable>
+            </template>
+<template if:true={error}>
+                {error}
+            </template>
+</div>
+
+</lightning-card>
+</template>
